@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Game1Gen : MonoBehaviour
+public class Game3Gen : MonoBehaviour
 {
     public GameObject enemy;
-    public Vector3 spawnLocation = new Vector3(4.5f, 1, 2);
-    public Vector3 endLocation = new Vector3(4.5f, 1, -1);
+    public Vector3 spawnLocation = new Vector3(0.09f, 1f, -4.499f);
     public int score;
     public Text scoreText;
 
@@ -58,16 +57,17 @@ public class Game1Gen : MonoBehaviour
 
     public void startGame() {
         // setColors();
-        GameObject timer = GameObject.FindGameObjectWithTag("FirstGame");
+        GameObject timer = GameObject.FindGameObjectWithTag("Game2Object");
         timer.GetComponent<CountdownTimer>().enabled = true;
-        for(int i=0; i<10; i++){
-        spawnLocation = new Vector3(Random.Range(3.0f, 6.0f), Random.Range(0.5f, 1.5f), -1.5f);
+        for(int i=0; i<30; i++){
+        spawnLocation = new Vector3(Random.Range(3f, 5f), 
+        Random.Range(0.7f, 1.5f), Random.Range(-3f, -1f));
         Instantiate(enemy, spawnLocation, Quaternion.identity);
         transform.position = enemy.transform.position;
 
     }
 
-        
+
 
     }
 

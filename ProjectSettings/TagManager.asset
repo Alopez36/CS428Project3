@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Game1Object
+  - Game2Object
+  - Game3Object
+  - FirstGame
+  - Targets
+  - t1
+  - t2
+  - t3
+  - t4
+  - t5
+  - t6
   layers:
   - Default
   - TransparentFX
